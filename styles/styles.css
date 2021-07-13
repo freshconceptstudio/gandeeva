@@ -73,7 +73,8 @@ body {
   /*right: -2000px;*/
   top: 50%;
   bottom: 50%;
-  right: -200px;
+  right: -400px;
+  opacity: 0;
   transition:All .25s ease-in;
   -webkit-transition:All .25s ease-in;
   -moz-transition:All .25s ease-in;
