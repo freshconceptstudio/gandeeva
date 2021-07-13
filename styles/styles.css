@@ -67,6 +67,7 @@ body {
 .color.half:after {
   top: 40%;
   bottom: 40%;
+  opacity: 0;
 }
 
 .color.done:after {
