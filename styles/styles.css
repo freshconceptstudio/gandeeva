@@ -13,6 +13,72 @@ body {
   padding-bottom: 130px;
 }
 
+.background {
+  opacity: 0;
+  transition:All 1s ease-in;
+  -webkit-transition:All 1s ease-in;
+  -moz-transition:All 1s ease-in;
+}
+
+.background.initial {
+  opacity: 1;
+}
+
+.cover .color {
+  background: url('../images/cover-image.png');
+  background-size: cover;
+  width:0;
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  opacity: 0;
+  transition:All 1s ease-in;
+  -webkit-transition:All 1s ease-in;
+  -moz-transition:All 1s ease-in;
+}
+
+.cover .color:after {
+  content: "";
+  position: absolute;
+  right: -50px;
+  top: 40%;
+  bottom: 40%;
+  width: 100px;
+  background-image: url('../images/glow.png');
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  transition:All .6s ease-in;
+  -webkit-transition:All .6s ease-in;
+  -moz-transition:All .6s ease-in;
+}
+
+.color.loaded {
+  opacity: 1;
+  width:100%;
+}
+
+.color.loaded:after {
+  top: -10px;
+  bottom: -10px;
+}
+
+.color.half:after {
+  top: 40%;
+  bottom: 40%;
+}
+
+.color.done:after {
+  /*right: -2000px;*/
+  top: 50%;
+  bottom: 50%;
+  right: -200px;
+  transition:All .25s ease-in;
+  -webkit-transition:All .25s ease-in;
+  -moz-transition:All .25s ease-in;
+}
+
 nav a {
   text-transform: uppercase;
   font-style: normal;
@@ -164,13 +230,21 @@ h3 {
   top: -230px;
 }
 
+.proteins.two {
+  width: 421px;
+  left: auto;
+  right: 0;
+  -webkit-transform: rotateX(180deg);
+            transform: rotateX(180deg);
+}
+
 .proteins img { position: absolute; }
 
 .proteins .blue {
-  animation: blue 10s infinite;
-    -moz-animation: blue 10s infinite;
-    -webkit-animation: blue 10s infinite;
-    -o-animation: blue 10s infinite;
+  animation: blue 5s infinite;
+    -moz-animation: blue 5s infinite;
+    -webkit-animation: blue 5s infinite;
+    -o-animation: blue 5s infinite;
 }
 
 @keyframes blue {
@@ -182,25 +256,25 @@ h3 {
 }
 
 .proteins .purple {
-  animation: purple 10s infinite;
-    -moz-animation: purple 10s infinite;
-    -webkit-animation: purple 10s infinite;
-    -o-animation: purple 10s infinite;
+  animation: purple 5s infinite;
+    -moz-animation: purple 5s infinite;
+    -webkit-animation: purple 5s infinite;
+    -o-animation: purple 5s infinite;
 }
 
 @keyframes purple {
-    0% { top: 0; left: 0; }
-    25% { top: 0; left: -40px; }
-    50% { top: 0; left: 0; }
-    25% { top: 0; left: -40px; }
-    100% { top: 0; left: 0; }
+    0% { top: 90px; left: -40px; }
+    25% { top: 150px; left: -80px; }
+    50% { top: 90px; left: -40px; }
+    25% { top: 150px; left: -80px; }
+    100% { top: 90px; left: -40px; }
 }
 
 .proteins .pink {
-  animation: pink 10s infinite;
-    -moz-animation: pink 10s infinite;
-    -webkit-animation: pink 10s infinite;
-    -o-animation: pink 10s infinite;
+  animation: pink 5s infinite;
+    -moz-animation: pink 5s infinite;
+    -webkit-animation: pink 5s infinite;
+    -o-animation: pink 5s infinite;
 }
 
 @keyframes pink {
@@ -209,6 +283,13 @@ h3 {
     50% { bottom: 0; left: 100px; }
     75% { bottom: 0; left: 150px; }
     100% { bottom: 0; left: 100px; }
+}
+
+.proteins.two .blue, .proteins.two .pink, .proteins.two .purple {
+  animation: pink 12s infinite;
+    -moz-animation: pink 12s infinite;
+    -webkit-animation: pink 12s infinite;
+    -o-animation: pink 12s infinite;
 }
 
 section.links {

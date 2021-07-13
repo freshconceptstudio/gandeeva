@@ -8,6 +8,7 @@
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap" rel="stylesheet">
   <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="styles/styles.css">
+  <script src="js/main.js"></script>
 </head>
 <body>
   <div class="cover container mx-auto">
@@ -29,8 +30,9 @@
           <h1>We are harnessing the transformative power of cryo-EM to design better drugs</h1>
         </div>
       </div>
-      <div class="w-full md:w-1/2">
-        <img src="images/cover-image.png">
+      <div class="w-full md:w-1/2 relative background" style="background: url('images/cover-image-gray.png'); background-size: contain;">
+        <img src="images/cover-image.png" style="opacity: 0;">
+        <div class="color"></div>
       </div>
     </div>
   </div>
@@ -78,7 +80,12 @@
       <a href="#" class="button">Contact Us</a>
     </div>
   </section>
-  <footer class="container mx-auto">
+  <footer class="relative">
+    <div class="proteins absolute left-0 top-0 two">
+      <img src="images/protein-blue.png" width="400" class="blue">
+      <img src="images/protein-purple.png" width="600" class="purple">
+      <img src="images/protein-pink.png" width="200" class="pink">
+    </div>
   </footer>
   <div class="w-full copyright container mx-auto">
     <p>&copy; 2021 Gandeeva Therapeutics. All rights reserved</p>
