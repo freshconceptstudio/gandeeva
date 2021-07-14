@@ -5,6 +5,32 @@ body {
   font-weight: 400;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+h1 {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 60px;
+  line-height: 65px;
+  color: #FFFFFF;
+}
+
+h2 {
+  font-family: DM Sans;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 60px;
+  line-height: 60px;
+  text-align: center;
+  position: relative;
+  margin-bottom: 80px;
+}
+
+p {
+  font-size: 18px;
+  line-height: 26px;
+  margin-bottom: 15px;
 }
 
 .cover {
@@ -18,6 +44,7 @@ body {
   transition:All 1s ease-in;
   -webkit-transition:All 1s ease-in;
   -moz-transition:All 1s ease-in;
+  position: relative;
 }
 
 .background.initial {
@@ -32,26 +59,88 @@ body {
   left: 0;
   top: 0;
   bottom: 0;
-  opacity: 0;
-  transition:All 1s ease-in;
-  -webkit-transition:All 1s ease-in;
-  -moz-transition:All 1s ease-in;
+  opacity: 1;
+  transition:All 2s ease;
+  -webkit-transition:All 2s ease;
+  -moz-transition:All 2s ease;
 }
 
-.cover .color:after {
-  content: "";
+.cover .color:before {
+  content:  "";
   position: absolute;
-  right: -50px;
-  top: 40%;
-  bottom: 40%;
-  width: 100px;
-  background-image: url('../images/glow.png');
+  right: 0;
+  top: -20px;
+  bottom: -20px;
+  width: 1px;
+  background-color: rgba(250,250,250,0.1);
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
-  transition:All .6s ease-in;
+/*  transition:All .6s ease-in;
   -webkit-transition:All .6s ease-in;
-  -moz-transition:All .6s ease-in;
+  -moz-transition:All .6s ease-in;*/
+}
+
+.color .gandeeva {
+  position: absolute;
+  right: -56px;
+  bottom: -70px;
+  opacity: 0;
+  animation: pulse 2s infinite;
+    -moz-animation: pulse 2s infinite;
+    -webkit-animation: pulse 2s infinite;
+    -o-animation: pulse 2s infinite;
+}
+
+.color .gandeeva img {
+  width: 150px;
+}
+
+@keyframes pulse {
+    0% { bottom: -70px; }
+    25% { bottom: -75px; }
+    100% { bottom: -70px; }
+}
+
+.background:after {
+  content:  "Evolution of cro-EM";
+  position: absolute;
+  left: 0;
+  right: 0;
+  text-align: center;
+  font-size: 16px;
+  font-style: italic;
+  bottom: -70px;
+/*  transition:All .6s ease-in;
+  -webkit-transition:All .6s ease-in;
+  -moz-transition:All .6s ease-in;*/
+}
+
+.color .info {
+  position: absolute;
+  width: 200px;
+  right: -100px;
+  top: -70px;
+  text-align: center;
+}
+
+.color.step1 { width: 10%; }
+.color.step2 { width: 30%; }
+.color.step3 { width: 40%; }
+.color.step4 { width: 60%; }
+.color.step5 { width: 80%; }
+.color.step6 { width: 100%; }
+
+.info .year {
+  font-weight: bold;
+  display: block;
+}
+
+.info .measurement {
+  display: block;
+  margin-top: -3px;
+  font-size: 14px;
+  font-style: italic;
 }
 
 .color.loaded {
@@ -104,25 +193,6 @@ label {
   display: block;
 }
 
-h1 {
-  font-style: normal;
-  font-weight: normal;
-  font-size: 60px;
-  line-height: 65px;
-  color: #FFFFFF;
-}
-
-h2 {
-  font-family: DM Sans;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 60px;
-  line-height: 60px;
-  text-align: center;
-  position: relative;
-  margin-bottom: 80px;
-}
-
 a.button {
   padding:  10px 70px 10px 20px;
   background-image: url(../images/arrow.svg);
@@ -130,9 +200,10 @@ a.button {
   border: 1px solid #fff;
   background-repeat: no-repeat;
   background-position: calc(100% - 20px) center;
-  transition:All .25s ease;
+  transition:All .2s ease;
   -webkit-transition:All .25s ease;
   -moz-transition:All .25s ease;
+  display: inline-block;
 }
 
 a.button:hover {
@@ -160,6 +231,9 @@ h3 {
  text-transform: uppercase;
 }
 
+
+/*LEADERSHIP TEAM*/
+
 .leadership {
   position: relative;
 }
@@ -169,12 +243,43 @@ h3 {
 }
 
 .leadership tr:first-child {
-  border-bottom: 1px rgba(250, 250, 250, 0.3) solid;
+  border-bottom: 1px rgba(250, 250, 250, 0.1) solid;
 }
 
 .leadership td {
-  padding: 40px;
+  padding: 90px 0 60px 0;
 }
+
+.leadership .avatar {
+  width: 400px;
+  height: 400px;
+  background-position: center;
+  background-size: cover;
+  margin-right: 40px;
+  position: relative;
+}
+
+.avatar:before {
+  content: "";
+  position: absolute;
+  left: -25px;
+  top: -25px;
+  width: 400px;
+  height: 400px;
+  background-color: #FE3A83;
+  z-index: -1;
+  opacity: .5;
+}
+
+.avatar.purple:before {
+  background-color: #5F2F84;
+}
+
+.avatar.blue:before {
+  background-color: #3AB5E6;
+}
+
+
 
 .leadership td.link {
   background-position: center;
@@ -202,26 +307,34 @@ h3 {
   bottom: 0;
 }
 
+.leadership .button {
+  margin-right: 30px;
+  margin-top: 15px;
+}
+
 .leadership .title {
   display: inline-block;
-  width: 225px;
   font-style: normal;
   font-weight: bold;
-  font-size: 24px;
+  font-size: 20px;
   line-height: 31px;
   letter-spacing: 0.1em;
   text-transform: uppercase;
   color: #666666;
   margin-right: 50px;
+  display: block;
 }
 
 .leadership .name {
   font-family: DM Sans;
   font-style: normal;
   font-weight: 500;
-  font-size: 28px;
-  line-height: 36px;
+  font-size: 32px;
+  line-height: 42px;
 }
+
+
+/*FLOATING PROTEINS*/
 
 .proteins {
   z-index:-1;
@@ -229,7 +342,7 @@ h3 {
   height: 462px;
   position: absolute;
   left: 0;
-  top: -230px;
+  top: -530px;
 }
 
 .proteins.two {
@@ -296,11 +409,14 @@ h3 {
 
 section.links {
   padding: 150px 0;
+  display: block;
+  /*background-color: rgba(0,0,0,0.2);*/
+  background-color: rgba(250,250,250,0.05);
+  margin: 80px 0 40px 0;
 }
 
 footer {
-  margin-top: 80px;
-  border-top: 1px rgba(250, 250, 250, 0.3) solid;
+  /*border-top: 1px rgba(250, 250, 250, 0.1) solid;*/
   padding-top: 20px;
 
 }
@@ -308,6 +424,7 @@ footer {
 .copyright {
   font-style: normal;
   font-weight: normal;
+  text-align-last: center;
   font-size: 14px;
   line-height: 24px;
   font-feature-settings: 'liga' off;
