@@ -1,0 +1,321 @@
+body {
+  background-color: #021F2D;
+  color: white;
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 400;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.cover {
+  position: relative;
+  overflow: visible;
+  padding-bottom: 130px;
+}
+
+.background {
+  opacity: 0;
+  transition:All 1s ease;
+  -webkit-transition:All 1s ease;
+  -moz-transition:All 1s ease;
+}
+
+.background.initial {
+  opacity: 1;
+}
+
+.cover .color {
+  background: url('../images/cover-image.png');
+  background-size: cover;
+  width:0;
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  opacity: 0;
+  transition:All 1s ease;
+  -webkit-transition:All 1s ease;
+  -moz-transition:All 1s ease;
+}
+
+.cover .color:after {
+  content: "" !important;
+  position: absolute;
+  right: -50px;
+  top: 40%;
+  bottom: 40%;
+  width: 100px;
+  background-image: url('../images/glow.png');
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  transition:All .6s ease;
+  -webkit-transition:All .6s ease;
+  -moz-transition:All .6s ease;
+}
+
+.cover .color:before, .background:after {
+ display: none;
+}
+
+.color.loaded {
+  opacity: 1;
+  width:100%;
+}
+
+.color.loaded:after {
+  top: -10px;
+  bottom: -10px;
+}
+
+.color.half:after {
+  top: 40%;
+  bottom: 40%;
+  opacity: 0;
+}
+
+.color.done:after {
+  /*right: -2000px;*/
+  top: 50%;
+  bottom: 50%;
+  /*right: -400px;*/
+  opacity: 0;
+  transition:All .25s ease;
+  -webkit-transition:All .25s ease;
+  -moz-transition:All .25s ease;
+}
+
+nav a {
+  text-transform: uppercase;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 21px;
+  /* identical to box height */
+  letter-spacing: 0.1em;
+  color: #FFFFFF;
+  margin-left: 35px;
+}
+
+label {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 23px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin-bottom: 30px;
+  display: block;
+}
+
+h1 {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 60px;
+  line-height: 65px;
+  color: #FFFFFF;
+}
+
+h2 {
+  font-family: DM Sans;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 60px;
+  line-height: 60px;
+  text-align: center;
+  position: relative;
+  margin-bottom: 80px;
+}
+
+a.button {
+  padding:  10px 70px 10px 20px;
+  background-image: url(../images/arrow.svg);
+  background-size: 30px;
+  border: 1px solid #fff;
+  background-repeat: no-repeat;
+  background-position: calc(100% - 20px) center;
+  transition:All .25s ease;
+  -webkit-transition:All .25s ease;
+  -moz-transition:All .25s ease;
+}
+
+a.button:hover {
+  background-position: calc(100% - 15px) center;
+}
+
+h2:after {
+  content: "";
+  background: #fff;
+  width: 100px;
+  height: 4px;
+  position: absolute;
+  z-index: 1;
+  top: 90px;
+  left: 50%;
+  margin-left: -50px;
+}
+
+h3 {
+ font-style: normal;
+ font-weight: normal;
+ font-size: 26px;
+ line-height: 47px;
+ letter-spacing: 0.1em;
+ text-transform: uppercase;
+}
+
+.leadership {
+  position: relative;
+}
+
+.leadership table {
+  width: 100%;
+}
+
+.leadership tr:first-child {
+  border-bottom: 1px rgba(250, 250, 250, 0.3) solid;
+}
+
+.leadership td {
+  padding: 40px;
+}
+
+.leadership td.link {
+  background-position: center;
+  position: relative;
+  background-repeat: no-repeat;
+  border-left: 1px rgba(250, 250, 250, 0.3) solid;
+  width: 160px;
+}
+
+.leadership td.link img {
+  transition:All .5s ease;
+  -webkit-transition:All .5s ease;
+  -moz-transition:All .5s ease;
+}
+
+.leadership td.link:hover img {
+  margin-left: 10px;
+}
+
+.leadership td.link a {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.leadership .title {
+  display: inline-block;
+  width: 225px;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 31px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #666666;
+  margin-right: 50px;
+}
+
+.leadership .name {
+  font-family: DM Sans;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 28px;
+  line-height: 36px;
+  display: block;
+}
+
+.proteins {
+  z-index:-1;
+  width: 421px;
+  height: 462px;
+  position: absolute;
+  left: 0;
+  top: -230px;
+}
+
+.proteins.two {
+  width: 421px;
+  left: auto;
+  right: 0;
+  -webkit-transform: rotateX(180deg);
+            transform: rotateX(180deg);
+}
+
+.proteins img { position: absolute; }
+
+.proteins .blue {
+  animation: blue 5s infinite;
+    -moz-animation: blue 5s infinite;
+    -webkit-animation: blue 5s infinite;
+    -o-animation: blue 5s infinite;
+}
+
+@keyframes blue {
+    0% { top: 0; right: 0; }
+    25% { top: 40px; right:40px; }
+    50% { top: 0; right:0; }
+    75% { top: 40px; right:40px; }
+    100% { top: 0; right: 0; }
+}
+
+.proteins .purple {
+  animation: purple 5s infinite;
+    -moz-animation: purple 5s infinite;
+    -webkit-animation: purple 5s infinite;
+    -o-animation: purple 5s infinite;
+}
+
+@keyframes purple {
+    0% { top: 90px; left: -40px; }
+    25% { top: 150px; left: -80px; }
+    50% { top: 90px; left: -40px; }
+    25% { top: 150px; left: -80px; }
+    100% { top: 90px; left: -40px; }
+}
+
+.proteins .pink {
+  animation: pink 5s infinite;
+    -moz-animation: pink 5s infinite;
+    -webkit-animation: pink 5s infinite;
+    -o-animation: pink 5s infinite;
+}
+
+@keyframes pink {
+    0% { bottom: 0; left: 100px; }
+    25% { bottom: 0; left: 150px; }
+    50% { bottom: 0; left: 100px; }
+    75% { bottom: 0; left: 150px; }
+    100% { bottom: 0; left: 100px; }
+}
+
+.proteins.two .blue, .proteins.two .pink, .proteins.two .purple {
+  animation: pink 12s infinite;
+    -moz-animation: pink 12s infinite;
+    -webkit-animation: pink 12s infinite;
+    -o-animation: pink 12s infinite;
+}
+
+section.links {
+  padding: 150px 0;
+}
+
+footer {
+  margin-top: 80px;
+  border-top: 1px rgba(250, 250, 250, 0.3) solid;
+  padding-top: 20px;
+
+}
+
+.copyright {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 24px;
+  font-feature-settings: 'liga' off;
+  color: #AAAAAA;
+
+}
