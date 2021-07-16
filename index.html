@@ -8,36 +8,34 @@
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap" rel="stylesheet">
   <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="styles/styles.css">
-  <script src="js/main.js"></script>
 </head>
 <body>
   <div class="cover container mx-auto">
     <header class="flex justify-between items-center py-8">
       <div>
-        <img src="images/logo.svg" width="300">
+        <img src="images/logo.svg" width="350">
       </div>
-      <nav class="hidden md:block">
+      <!-- <nav class="hidden md:block">
         <ul class="flex">
           <li><a href="#">Careers</a></li>
           <li><a href="#">Contact</a></li>
         </ul>
-      </nav>
+      </nav> -->
     </header>
     <div class="flex mt-12 md:mt-28 items-center">
       <div class="w-full md:w-1/2 pr-12">
         <div>
-          <label>At Gandeeva Therapeutics</label>
-          <h1>We are harnessing the transformative power of cryo-EM to design better drugs</h1>
+          <h1 class="mb-12">We are harnessing the transformative power of cryo-EM to design better drugs</h1>
+          <div class="flex">
+            <a href="#" class="button solid mr-8" target="_blank">See Our Job Openings</a>
+            <a href="#" class="button no-arrow" target="_blank">Contact Us</a>
+          </div>
         </div>
       </div>
       <div class="w-full md:w-1/2 relative background" style="background: url('images/cover-image-gray.png'); background-size: contain;" onload="fadeIn()">
         <img src="images/cover-image.png" style="opacity: 0;">
-        <div class="color">
-          <div class="info">
-            <span class="year">1968</span>
-            <span class="measurement">10 Angstroms</span>
-          </div>
-          <div class="gandeeva"><img src="images/logo.svg"></div>
+        <div class="color transition">
+          <div class="light"></div>
         </div>
       </div>
     </div>
@@ -57,7 +55,7 @@
               <div class="avatar" style="background-image: url('images/sriram.jpeg');"></div>
             </td>
             <td valign="top" width="100%">
-              <span class="name mb-8">Sriram Subramaniam</span>
+              <span class="name">Sriram Subramaniam</span>
               <span class="title mb-5">Founder & CEO</span>
               <p>Dr. Subramaniam is globally recognized for his leading contributions in cryo electron microscopy (cryo-EM). He was the first to demonstrate atomic resolution cryo-EM of proteins, demonstrate atomic resolution small molecule drug mapping, and demonstrate the use of cryo-EM in precision medicine with structure of a drug bound to a patient mutant in cancer. His work led the field in showing that the structures of protein targets of a variety of clinical interest could be determined at high resolution using cryo-EM.</p>
               <p>He received his Ph.D. in Physical Chemistry from Stanford University and completed postdoctoral training in the Departments of Chemistry and Biology at the Massachusetts Institute of Technology.</p>
@@ -70,7 +68,7 @@
               <div class="avatar blue" style="background-image: url('images/don.jpg');"></div>
             </td>
             <td valign="top" width="100%">
-              <span class="name mb-8">Don Kania</span>
+              <span class="name">Don Kania</span>
               <span class="title mb-5">Board Chair</span>
               <p>Dr. Kania received his PhD in engineering and MS in physics from the University of Michigan and currently serves on the advisory board of Michigan’s College of Engineering. Don Kania, Ph.D. was the Chief Executive Officer of FEI Company from August 2006 until the company was sold in 2016 to Thermo-Fisher for $4.2 billion. During his tenure, revenue doubled while profitability and share price increased by 5x.</p>
               <p> In addition to serving as the Board Chair at Gandeeva, he serves on the non-profit boards of the United Way of Jackson County Oregon and the Family Nurturing Center located in Medford, OR.</p>

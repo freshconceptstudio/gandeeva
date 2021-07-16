@@ -7,84 +7,6 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-.cover {
-  position: relative;
-  overflow: visible;
-  padding-bottom: 130px;
-}
-
-.background {
-  opacity: 0;
-  transition:All 1s ease;
-  -webkit-transition:All 1s ease;
-  -moz-transition:All 1s ease;
-}
-
-.background.initial {
-  opacity: 1;
-}
-
-.cover .color {
-  background: url('../images/cover-image.png');
-  background-size: cover;
-  width:0;
-  position: absolute;
-  left: 0;
-  top: 0;
-  bottom: 0;
-  opacity: 0;
-  transition:All 1s ease;
-  -webkit-transition:All 1s ease;
-  -moz-transition:All 1s ease;
-}
-
-.cover .color:after {
-  content: "" !important;
-  position: absolute;
-  right: -50px;
-  top: 40%;
-  bottom: 40%;
-  width: 100px;
-  background-image: url('../images/glow.png');
-  background-size: contain;
-  background-position: center;
-  background-repeat: no-repeat;
-  transition:All .6s ease;
-  -webkit-transition:All .6s ease;
-  -moz-transition:All .6s ease;
-}
-
-.cover .color:before, .background:after {
- display: none;
-}
-
-.color.loaded {
-  opacity: 1;
-  width:100%;
-}
-
-.color.loaded:after {
-  top: -10px;
-  bottom: -10px;
-}
-
-.color.half:after {
-  top: 40%;
-  bottom: 40%;
-  opacity: 0;
-}
-
-.color.done:after {
-  /*right: -2000px;*/
-  top: 50%;
-  bottom: 50%;
-  /*right: -400px;*/
-  opacity: 0;
-  transition:All .25s ease;
-  -webkit-transition:All .25s ease;
-  -moz-transition:All .25s ease;
-}
-
 nav a {
   text-transform: uppercase;
   font-style: normal;
@@ -176,9 +98,6 @@ h3 {
   border-bottom: 1px rgba(250, 250, 250, 0.3) solid;
 }
 
-.leadership td {
-  padding: 40px;
-}
 
 .leadership td.link {
   background-position: center;
@@ -228,16 +147,16 @@ h3 {
   display: block;
 }
 
-.proteins {
+/*.proteins {
   z-index:-1;
   width: 421px;
   height: 462px;
   position: absolute;
   left: 0;
   top: -230px;
-}
+}*/
 
-.proteins.two {
+/*.proteins.two {
   width: 421px;
   left: auto;
   right: 0;
@@ -297,12 +216,12 @@ h3 {
     -moz-animation: pink 12s infinite;
     -webkit-animation: pink 12s infinite;
     -o-animation: pink 12s infinite;
-}
+}*/
 
 section.links {
   padding: 150px 0;
 }
-
+/*
 footer {
   margin-top: 80px;
   border-top: 1px rgba(250, 250, 250, 0.3) solid;
@@ -319,3 +238,4 @@ footer {
   color: #AAAAAA;
 
 }
+*/
