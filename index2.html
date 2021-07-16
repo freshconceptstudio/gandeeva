@@ -8,32 +8,38 @@
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap" rel="stylesheet">
   <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="styles/styles.css">
-  <link rel="stylesheet" type="text/css" href="styles/styles2.css">
-  <script src="js/main2.js"></script>
 </head>
 <body>
-  <div class="cover container mx-auto">
-    <header class="flex justify-between items-center py-8">
-      <div>
-        <img src="images/logo.svg" width="300">
-      </div>
-      <nav class="hidden md:block">
-        <ul class="flex">
-          <li><a href="#">Careers</a></li>
-          <li><a href="#">Contact</a></li>
-        </ul>
-      </nav>
-    </header>
-    <div class="flex mt-12 md:mt-28 items-center">
-      <div class="w-full md:w-1/2 pr-12">
+  <div class="cover relative mb-16">
+    <div style="position: absolute; left: 0; right: 0; top: 0; bottom: 0; z-index: -1; background-image: url('images/background-movie.gif'); background-size: cover; opacity: .05;"></div>
+    <div class="container mx-auto ">
+      <header class="flex justify-between items-center py-8">
         <div>
-          <label>At Gandeeva Therapeutics</label>
-          <h1>We are harnessing the transformative power of cryo-EM to design better drugs</h1>
+          <img src="images/logo.svg" width="350">
         </div>
-      </div>
-      <div class="w-full md:w-1/2 relative background" style="background: url('images/cover-image-gray.png'); background-size: contain;" onload="fadeIn()">
-        <img src="images/cover-image.png" style="opacity: 0;">
-        <div class="color"></div>
+        <!-- <nav class="hidden md:block">
+          <ul class="flex">
+            <li><a href="#">Careers</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </nav> -->
+      </header>
+      <div class="flex mt-12 md:mt-28 items-center">
+        <div class="w-full md:w-1/2 pr-12">
+          <div>
+            <h1 class="mb-12">We are harnessing the transformative power of cryo-EM to design better drugs</h1>
+            <div class="flex">
+              <a href="#" class="button solid mr-8" target="_blank">See Our Job Openings</a>
+              <a href="#" class="button no-arrow" target="_blank">Contact Us</a>
+            </div>
+          </div>
+        </div>
+        <div class="w-full md:w-1/2 relative background" style="background: url('images/cover-image-gray.png'); background-size: contain;" onload="fadeIn()">
+          <img src="images/cover-image.png" style="opacity: 0;">
+          <div class="color transition">
+            <div class="light"></div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
