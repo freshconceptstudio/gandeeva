@@ -28,7 +28,7 @@
           <h1 class="mb-12">We are harnessing the transformative power of cryo-EM to design better drugs</h1>
           <div class="flex">
             <a href="#" class="button solid mr-8" target="_blank">See Our Job Openings</a>
-            <a href="#" class="button no-arrow" target="_blank">Contact Us</a>
+            <a href="#" class="button no-arrow" onclick="openModal(event)">Contact Us</a>
           </div>
         </div>
       </div>
@@ -87,7 +87,7 @@
       </div>
       <div class="text-center">
         <h2>Have a question?</h2>
-        <a href="#" class="button">Contact Us</a>
+        <a href="#" class="button open-modal" onclick="openModal(event)">Contact Us</a>
       </div>
     </div>
   </section>
@@ -101,5 +101,38 @@
   <div class="w-full copyright container mx-auto">
     <p>&copy; 2021 Gandeeva Therapeutics. All rights reserved</p>
   </div>
+  <div class="overlay">
+    <div class="modal">
+      <div class="close" onclick="closeModal()"></div>
+      <h2>Please Reach Out</h2>
+      <form action="https://submit-form.com/MiK7lLpM">
+        <input type="hidden" name="_feedback.whitelabel" value="true" />
+        <input type="hidden" name="_feedback.dark" value="true" />
+        <input type="hidden" name="_feedback.success.title" value="We've received your message!"
+          />
+        <div class="grid grid-cols-1 md:grid-cols-2 md:gap-6">
+          <input type="text" name="first_name" placeholder="First Name">
+          <input type="text" name="last_name" placeholder="Last Name">
+        </div>
+        <div>
+          <input type="email" name="email" placeholder="Email Address" />
+          <textarea placeholder="Type Your Message" name="message"></textarea>
+        </div>
+        <button type="submit">Send</button>
+      </form>
+    </div>
+  </div>
+  <script type="text/javascript">
+    function openModal(e) {
+      e.preventDefault();
+      var modal = document.getElementsByClassName('overlay')[0];
+      modal.classList.add("active");
+    }
+
+    function closeModal() {
+      var element = document. getElementsByClassName('overlay')[0];
+      element.classList.remove('active');
+    }
+  </script>
 </body>
 </html>

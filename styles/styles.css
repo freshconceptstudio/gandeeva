@@ -56,7 +56,7 @@ label {
   display: block;
 }
 
-a.button {
+a.button, button[type="submit"] {
   padding:  10px 70px 10px 20px;
   background-image: url(../images/arrow.svg);
   background-size: 30px;
@@ -69,7 +69,7 @@ a.button {
   display: inline-block;
 }
 
-.button.solid {
+.button.solid, button[type="submit"] {
   background-color: #5f2f84;
   border-color: #5f2f84;
   /*background-color: #3ab5e6;
@@ -411,4 +411,81 @@ footer {
   font-feature-settings: 'liga' off;
   color: #AAAAAA;
 
+}
+
+input, textarea {
+  padding: 8px 10px;
+  border: 1px solid #ddd;
+  font-size: 18px;
+  width: 100%;
+  color: #333;
+  margin: 10px;
+}
+
+textarea {
+  font-size: 18px;
+}
+
+button[type="submit"] {
+  margin: 10px;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+  opacity: 0;
+  background-color: rgba(0,0,0,0.8);
+}
+
+.close {
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 99;
+  background-image: url('../images/close.svg');
+  background-size: 40px;
+  background-repeat: no-repeat;
+  background-position: center;
+  opacity: .2;
+  cursor: pointer;
+}
+
+.modal textarea {
+  height: 250px;
+}
+
+.overlay.active {
+  z-index: 99;
+  opacity: 1;
+}
+
+.modal h2 {
+  color: #333;
+}
+
+.modal h2:after {
+  background: #333;
+}
+
+.modal {
+  background-color: #FFF;
+  padding: 60px;
+  position: absolute;
+  left: 25%;
+  right: 25%;
+  top: 200px;
+  opacity: 0;
+  transition:All 1s ease;
+  -webkit-transition:All 1s ease;
+  -moz-transition:All 1s ease;
+}
+
+.overlay.active .modal {
+  opacity: 1;
 }
