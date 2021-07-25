@@ -457,7 +457,7 @@ button[type="submit"] {
 }
 
 .modal textarea {
-  height: 100px;
+  height: 50px;
 }
 
 .overlay.active {
