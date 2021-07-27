@@ -26,3 +26,12 @@ a {
 .opening:last-child {
   border-bottom: none;
 }
+
+#application {
+  background-color: rgba(250,250,250,0.05);
+  margin-bottom: 80px;
+}
+
+a.button {
+  color: #FFF !important;
+}
