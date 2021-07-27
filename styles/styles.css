@@ -93,7 +93,7 @@ h2:after {
   height: 4px;
   position: absolute;
   z-index: 1;
-  top: 90px;
+  bottom: -25px;
   left: 50%;
   margin-left: -50px;
 }
@@ -121,6 +121,8 @@ h3 {
 
 .background {
   opacity: 1;
+  background-repeat: no-repeat !important;
+  background-position: center !important;
   transition:All 1s ease;
   -webkit-transition:All 1s ease;
   -moz-transition:All 1s ease;
@@ -133,6 +135,8 @@ h3 {
 .cover .color {
   background: url('../images/cover-image.png');
   background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
   width:0;
   position: absolute;
   display: flex;
@@ -223,11 +227,11 @@ h3 {
   width: 100%;
 }
 
-.leadership tr:first-child {
+.people div:first-child {
   border-bottom: 1px rgba(250, 250, 250, 0.1) solid;
 }
 
-.leadership td {
+.people > div {
   padding: 60px 0 60px 0;
 }
 
@@ -442,14 +446,14 @@ button[type="submit"] {
 }
 
 .close {
-  width: 100px;
-  height: 100px;
+  width: 80px;
+  height: 80px;
   position: absolute;
   top: 0;
   right: 0;
   z-index: 99;
   background-image: url('../images/close.svg');
-  background-size: 40px;
+  background-size: 25px;
   background-repeat: no-repeat;
   background-position: center;
   opacity: .2;
@@ -488,4 +492,36 @@ button[type="submit"] {
 
 .overlay.active .modal {
   opacity: 1;
+}
+
+
+@media only screen and (max-width: 768px) {
+  .container {
+    max-width: 90%;
+  }
+
+  h1 {
+    font-size: 45px;
+    line-height: 55px;
+  }
+
+  h2 {
+    font-size: 40px;
+    line-height: 50px;
+  }
+
+  .modal {
+    width: 90%;
+    left: 5%;
+  }
+
+  .cover a.button {
+    padding: 10px 20px;
+  }
+}
+
+
+.container {
+  max-width: 90%;
+  width: 90%;
 }

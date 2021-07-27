@@ -10,7 +10,7 @@
   <link rel="stylesheet" type="text/css" href="styles/styles.css">
 </head>
 <body>
-  <div class="cover container mx-auto">
+  <div class="cover container md:px-6 mx-auto">
     <header class="flex justify-between items-center py-8">
       <div>
         <img src="images/logo.svg" width="350">
@@ -22,17 +22,17 @@
         </ul>
       </nav> -->
     </header>
-    <div class="flex mt-12 md:mt-28 items-center">
-      <div class="w-full md:w-1/2 pr-12">
+    <div class="flex mt-12 md:mt-28 items-center flex-col-reverse lg:flex-row">
+      <div class="w-full lg:w-1/2 pr-0 lg:pr-12">
         <div>
-          <h1 class="mb-12">We are harnessing the transformative power of cryo-EM to design better drugs</h1>
-          <div class="flex">
-            <a href="https://boards.greenhouse.io/gandeevatherapeutics" class="button solid mr-8" target="_blank">See Our Job Openings</a>
-            <a href="#" class="button no-arrow" onclick="openModal(event)">Contact Us</a>
+          <h1 class="mb-12 text-center lg:text-left">We are harnessing the transformative power of cryo-EM and machine learning to design better drugs</h1>
+          <div class="flex flex-col md:flex-row justify-center lg:justify-start">
+            <a href="https://boards.greenhouse.io/gandeevatherapeutics" class="button solid md:mr-8 mr-0 mb-6 md:mb-0 text-center" target="_blank">See Our Job Openings</a>
+            <a href="#" class="button no-arrow text-center" onclick="openModal(event)">Contact Us</a>
           </div>
         </div>
       </div>
-      <div class="w-full md:w-1/2 relative background" style="background: url('images/cover-image.png'); background-size: contain;" onload="fadeIn()">
+      <div class="w-full lg:w-1/2 relative background mb-12 lg:mb-0" style="background: url('images/cover-image.png'); background-size: contain;" onload="fadeIn()">
         <img src="images/cover-image.png" style="opacity: 0;">
       </div>
     </div>
@@ -43,15 +43,13 @@
       <img src="images/protein-purple.png" width="1000" class="purple">
       <img src="images/protein-pink.png" width="200" class="pink">
     </div> -->
-    <div class="container mx-auto">
+    <div class="container md:px-6 mx-auto">
       <div>
         <h3>Leadership Team</h3>
-        <table>
-          <tr>
-            <td>
-              <div class="avatar" style="background-image: url('images/sriram.jpeg');"></div>
-            </td>
-            <td valign="top" width="100%">
+        <div class="people">
+          <div class="flex flex-col lg:flex-row border-gray-50">
+            <div class="avatar mb-12 lg:mb-0 flex-shrink-0" style="background-image: url('images/sriram.jpeg');"></div>
+            <div>
               <span class="name">Sriram Subramaniam</span>
               <span class="title mb-5">Founder & CEO</span>
               <p>Dr. Subramaniam is globally recognized for his leading contributions in cryo-electron microscopy (cryo-EM). He was the first to show that protein structures at resolutions of ~ 2 Å could be determined using cryo-EM methods. He was also the first to show that cryo-EM could be used to visualize drug binding to clinically relevant targets at atomic resolution. revolutionizing the landscape of drug discovery. Dr. Subramaniam has continued to stay at the forefront of the cryo-EM field by advancing the technology and repeatedly demonstrating that clinical important protein targets can be visualized at high resolution using cryo-EM. </p>
@@ -59,30 +57,28 @@
               <p>Sriram received his PhD in Physical Chemistry from Stanford University and completed postdoctoral training in the Departments of Chemistry and Biology at the Massachusetts Institute of Technology.</p>
               <a href="https://www.linkedin.com/in/sriramsubramaniam/" class="button " target="_blank">LinkedIn</a>
               <a href="http://electron.med.ubc.ca" class="button" target="_blank">Academic Research</a>
-            </td>
-          </tr>
-          <tr>
-            <td>
-              <div class="avatar blue" style="background-image: url('images/don.jpg');"></div>
-            </td>
-            <td valign="top" width="100%">
+            </div>
+          </div>
+          <div class="flex flex-col lg:flex-row border-gray-50">
+            <div class="avatar mb-12 lg:mb-0 flex-shrink-0" style="background-image: url('images/don.jpg');"></div>
+            <div>
               <span class="name">Don Kania</span>
               <span class="title mb-5">Board Chair</span>
               <p>Don Kania was the Chief Executive Officer of FEI Company, world-leading manufacturer of electron microscopes, from August 2006 until the company was sold in 2016 to Thermo-Fisher for $4.2 billion. Under his leadership, revenue doubled, while profitability and share price increased by 5-fold.             </p>
               <p>In addition to serving as the Board Chair at Gandeeva, Dr. Kania is a board member and on the audit committee of Intuitive Surgical (ISRG) and Nanostring (NSTG) and advises several start-up companies. He serves on the non-profit boards of the United Way of Jackson County Oregon and the Family Nurturing Center located in Medford, OR. Prior board experience includes director roles at Leupold & Stevens, Inc., a family-owned, sporting optics company, FEI Company (2006-2016), American Science & Engineering Inc. (ASEI) (February 2010 until the company was sold to OSI in 2016), and Aldevron, a privately held manufacturer of plasmid DNA for immunotherapy development and manufacturing.</p>
               <p>Don received his PhD in engineering and MS in physics from the University of Michigan and currently serves on the advisory board of Michigan’s College of Engineering. </p>
               <a href="https://www.linkedin.com/in/don-kania-039a6612/" class="button" target="_blank">LinkedIn</a>
-            </td>
-          </tr>
-        </table>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </section>
   <section class="links w-full">
-    <div class="grid grid-cols-2 container mx-auto">
+    <div class="grid grid-cols-2 container md:px-6 mx-auto">
       <div class="text-center">
         <h2>We are hiring!</h2>
-        <a href="https://boards.greenhouse.io/gandeevatherapeutics" class="button" target="_blank">See Our Job Openings</a>
+        <a href="https://boards.greenhouse.io/gandeevatherapeutics" class="button" target="_blank"><span class="hidden md:inline-block">See Our&nbsp;</span>Job Openings</a>
       </div>
       <div class="text-center">
         <h2>Have a question?</h2>
@@ -97,7 +93,7 @@
       <img src="images/protein-pink.png" width="200" class="pink">
     </div>
   </footer>
-  <div class="w-full copyright container mx-auto">
+  <div class="w-full copyright container md:px-6 mx-auto">
     <p>&copy; 2021 Gandeeva Therapeutics. All rights reserved</p>
   </div>
   <div class="overlay">
