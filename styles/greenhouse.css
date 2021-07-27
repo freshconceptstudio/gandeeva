@@ -10,6 +10,11 @@ body {
   overflow-x: hidden;
 }
 
+p, li {
+  font-size: 18px;
+  line-height: 26px;
+}
+
 a {
   color: #3ab5e6 !important;
 }
