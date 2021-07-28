@@ -28,8 +28,8 @@ h2 {
 }
 
 p {
-  font-size: 18px;
-  line-height: 26px;
+  font-size: 20px;
+  line-height: 28px;
   margin-bottom: 15px;
 }
 
@@ -227,21 +227,49 @@ h3 {
   width: 100%;
 }
 
-.people div:first-child {
-  border-bottom: 1px rgba(250, 250, 250, 0.1) solid;
+.people > div {
+  padding: 30px 0 30px 0;
 }
 
-.people > div {
-  padding: 60px 0 60px 0;
+.leadership .avatar-wrap {
+  width: 100%;
+  height: 520px;
+  overflow: hidden;
+  margin-bottom: 20px;
 }
 
 .leadership .avatar {
-  width: 400px;
-  height: 400px;
-  background-position: center;
+  width: 100%;
+  height: 520px;
+  background-position: center top;
   background-size: cover;
   margin-right: 40px;
   position: relative;
+  background-repeat: no-repeat;
+  transition: all .5s;
+}
+
+.leadership .avatar:hover {
+  transform: scale(1.1);
+}
+
+.leadership .avatar .overflow {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 0;
+  background-color: rgba(0,0,0,0.6);
+  z-index: 999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all .5s;
+}
+
+.leadership .avatar:hover .overflow {
+  opacity: 1;
 }
 
 /*.avatar:before {
@@ -297,7 +325,7 @@ h3 {
   margin-top: 15px;
 }
 
-.leadership .title {
+.title {
   display: inline-block;
   font-style: normal;
   font-weight: bold;
@@ -310,7 +338,7 @@ h3 {
   display: block;
 }
 
-.leadership .name {
+.name {
   font-family: DM Sans;
   font-style: normal;
   font-weight: 500;
@@ -493,6 +521,91 @@ button[type="submit"] {
 .overlay.active .modal {
   opacity: 1;
 }
+
+.leadership-profile {
+  box-shadow: 0 0 40px rgb(0 0 0 / 50%);
+  background-color: white;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  width: 95%;
+  right: -95%;
+  margin-right: -100px;
+  z-index: 99999;
+  color: #021F2D;
+  transform: translateZ(0);
+  transition:All .5s ease;
+}
+
+.leadership-profile.show {
+  transform: translateX(-100%);
+  margin-right: 0;
+}
+
+.leadership-profile .wrap {
+  padding: 80px;
+  height: 840px;
+  position: relative;
+  top: 50%;
+  margin-top: -420px;
+}
+
+.leadership-profile .avatar {
+  background-size: cover;
+  background-position: center;
+  height: 680px;
+  width: 50%;
+  margin-right: 30px;
+}
+
+.leadership-profile .button {
+  margin-top: 20px;
+  margin-right: 20px;
+}
+
+.leadership-profile .close-profile {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  left: -100px;
+  top: 50%;
+  margin-top: -50px;
+  background-color: white;
+  background-image: url('../images/close-panel.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  cursor: pointer;
+}
+
+.leadership-profile .close-profile:after {
+  content: "Close";
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  left: 0;
+  bottom: 10px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 12px;
+  opacity: 0;
+  transition:All .5s ease;
+  color: #5f2f84;
+}
+
+.profile-content {
+  opacity: 0;
+  transition:All 1s ease;
+  height: 0;
+}
+
+.profile-content.active {
+  opacity: 1;
+  height: auto;
+}
+
+.leadership-profile .close-profile:hover:after {
+  opacity: 1;
+  }
 
 
 @media only screen and (max-width: 768px) {
