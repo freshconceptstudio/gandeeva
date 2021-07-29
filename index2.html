@@ -18,6 +18,45 @@
   <link rel="stylesheet" type="text/css" href="styles/styles2.css">
 </head>
 <body>
+  <div class="leadership-profile">
+    <div class="close-profile" onclick="closeProfile(event)"></div>
+    <div class="flex flex-col wrap">
+      <div class="flex flex-row profile-content">
+        <div class="avatar mb-12 lg:mb-0 flex-shrink-0" style="background-image: url('images/sriram.jpeg');"></div>
+        <div>
+          <span class="name">Sriram Subramaniam</span>
+          <span class="title mb-5">Founder & CEO</span>
+          <p>Dr. Subramaniam is globally recognized for his leading contributions in cryo-electron microscopy (cryo-EM). He was the first to show that protein structures at resolutions of ~ 2 Å could be determined using cryo-EM methods. He was also the first to show that cryo-EM could be used to visualize drug binding to clinically relevant targets at atomic resolution. revolutionizing the landscape of drug discovery. Dr. Subramaniam has continued to stay at the forefront of the cryo-EM field by advancing the technology and repeatedly demonstrating that clinical important protein targets can be visualized at high resolution using cryo-EM. </p>
+          <p>His other significant contributions include structural studies of membrane proteins using electron crystallography, in the development of electron tomographic methods to study HIV-1, influenza and related viruses for vaccine development, and in pioneering new based technologies for cell and tissue imaging based on focused ion beams.  </p>
+          <p>Sriram received his PhD in Physical Chemistry from Stanford University and completed postdoctoral training in the Departments of Chemistry and Biology at the Massachusetts Institute of Technology.</p>
+          <a href="https://www.linkedin.com/in/sriramsubramaniam/" class="button solid " target="_blank">LinkedIn</a>
+          <a href="http://electron.med.ubc.ca" class="button solid" target="_blank">Academic Research</a>
+        </div>
+      </div>
+      <div class="flex flex-row profile-content">
+        <div class="avatar mb-12 lg:mb-0 flex-shrink-0" style="background-image: url('images/don.jpg');"></div>
+        <div>
+          <span class="name">Don Kania</span>
+          <span class="title mb-5">Board Chair</span>
+          <p>Don Kania was the Chief Executive Officer of FEI Company, world-leading manufacturer of electron microscopes, from August 2006 until the company was sold in 2016 to Thermo-Fisher for $4.2 billion. Under his leadership, revenue doubled, while profitability and share price increased by 5-fold.             </p>
+          <p>In addition to serving as the Board Chair at Gandeeva, Dr. Kania is a board member and on the audit committee of Intuitive Surgical (ISRG) and Nanostring (NSTG) and advises several start-up companies. He serves on the non-profit boards of the United Way of Jackson County Oregon and the Family Nurturing Center located in Medford, OR. Prior board experience includes director roles at Leupold & Stevens, Inc., a family-owned, sporting optics company, FEI Company (2006-2016), American Science & Engineering Inc. (ASEI) (February 2010 until the company was sold to OSI in 2016), and Aldevron, a privately held manufacturer of plasmid DNA for immunotherapy development and manufacturing.</p>
+          <p>Don received his PhD in engineering and MS in physics from the University of Michigan and currently serves on the advisory board of Michigan’s College of Engineering. </p>
+          <a href="https://www.linkedin.com/in/don-kania-039a6612/" class="button solid" target="_blank">LinkedIn</a>
+        </div>
+      </div>
+      <div class="flex flex-row profile-content">
+        <div class="avatar mb-12 lg:mb-0 flex-shrink-0" style="background-image: url('images/jason.jpeg');"></div>
+        <div>
+          <span class="name">Jason Crawford</span>
+          <span class="title mb-5">Vice President, Drug Discovery</span>
+          <p>Dr. Crawford oversees the drug development efforts at Gandeeva Therapeutics, translating unique Cryo-EM structural insights into novel medicines.</p>
+          <p>Jason held roles of increasing scientific responsibility and portfolio oversight at adMare BioInnovations (formerly CDRD) with the most senior role as Venture Partner. Prior to adMare, Dr. Crawford was at AnorMED Inc. where he was a Manager of Development Chemistry and led the drug substance CMC efforts to enable pre-clinical and outsourced GMP production for AMD070 for preclinical to Phase 2 clinical trials, and for plerixafor (Mozobil) for Phase 2 through to regulatory approval. Dr. Crawford also held medicinal chemistry roles at AnorMED and Microcide Inc. </p>
+          <p>Jason received his BSc and PhD from the University of Victoria and conducted postdoctoral research at the Ohio State University.</p>
+          <a href="https://www.linkedin.com/in/jason-b-crawford/" class="button solid " target="_blank">LinkedIn</a>
+        </div>
+      </div>
+    </div>
+  </div>
   <div class="cover container md:px-6 mx-auto">
     <header class="flex justify-between items-center py-8">
       <div>
@@ -62,6 +101,7 @@
                 <span class="name">Sriram Subramaniam</span>
                 <span class="title mb-5">Founder & CEO</span>
                 <p>Dr. Subramaniam is globally recognized for his leading contributions in cryo-electron microscopy (cryo-EM).</p>
+                <a href="#" class="button view-profile" onclick="openProfile(event, 0)">View Full Profile</a>
                 <a href="https://www.linkedin.com/in/sriramsubramaniam/" class="button " target="_blank">LinkedIn</a>
                 <a href="http://electron.med.ubc.ca" class="button" target="_blank">Academic Research</a>
               </div>
@@ -74,6 +114,7 @@
                 <span class="name">Don Kania</span>
                 <span class="title mb-5">Board Chair</span>
                 <p>Don Kania was the Chief Executive Officer of FEI Company, world-leading manufacturer of electron microscopes, from August 2006 until the company was sold in 2016 to Thermo-Fisher for $4.2 billion.</p>
+                <a href="#" class="button view-profile" onclick="openProfile(event, 1)">View Full Profile</a>
                 <a href="https://www.linkedin.com/in/don-kania-039a6612/" class="button" target="_blank">LinkedIn</a>
               </div>
             </div>
@@ -85,6 +126,7 @@
                 <span class="name">Jason Crawford</span>
                 <span class="title mb-5">VICE PRESIDENT, DRUG DISCOVERY</span>
                 <p>Dr. Crawford is an experienced scientific leader with 20+ years of experience in clinical biotech and preclinical translational development.</p>
+                <a href="#" class="button view-profile" onclick="openProfile(event, 2)">View Full Profile</a>
                 <a href="https://www.linkedin.com/in/don-kania-039a6612/" class="button" target="_blank">LinkedIn</a>
               </div>
             </div>
@@ -147,6 +189,28 @@
       var element = document. getElementsByClassName('overlay')[0];
       element.classList.remove('active');
     }
+
+    function openProfile(e, index) {
+      e.preventDefault();
+      var element = document.getElementsByClassName('leadership-profile')[0];
+      element.classList.add('show');
+
+      var profile_content = document.getElementsByClassName('profile-content')[index];
+      profile_content.classList.add('active');
+    }
+
+    function closeProfile(e) {
+      e.preventDefault();
+      var element = document.getElementsByClassName('leadership-profile')[0];
+      element.classList.remove('show');
+
+      var profiles = document.querySelectorAll('.profile-content'), i;
+
+      for (i = 0; i < profiles.length; ++i) {
+        profiles[i].classList.remove('active');
+      }
+    }
+
   </script>
 </body>
 </html>
