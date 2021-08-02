@@ -105,6 +105,12 @@ h2:after {
  line-height: 47px;
  letter-spacing: 0.1em;
  text-transform: uppercase;
+ text-align: left;
+ margin-bottom: 0;
+}
+
+.leadership h2:after {
+  display: none;
 }
 
 
@@ -120,7 +126,7 @@ h2:after {
 }
 
 .background {
-  background: url('images/cover-image.png');
+  background: url('../images/cover-image.png');
   background-size: contain;
   opacity: 1;
   background-repeat: no-repeat !important;
