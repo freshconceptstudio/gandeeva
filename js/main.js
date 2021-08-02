@@ -14,7 +14,7 @@ function openProfile(e, index) {
   var element = document.getElementsByClassName('leadership-profile')[0];
   element.classList.add('show');
 
-  var profile_content = document.getElementsByClassName('profile-content')[index];
+  var profile_content = document.getElementsByClassName('wrap')[index];
   profile_content.classList.add('active');
 }
 
@@ -23,7 +23,7 @@ function closeProfile(e) {
   var element = document.getElementsByClassName('leadership-profile')[0];
   element.classList.remove('show');
 
-  var profiles = document.querySelectorAll('.profile-content'), i;
+  var profiles = document.querySelectorAll('.wrap'), i;
 
   for (i = 0; i < profiles.length; ++i) {
     profiles[i].classList.remove('active');

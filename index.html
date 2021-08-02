@@ -90,7 +90,7 @@
       </div>
     </div>
   </section>
-  <section class="links w-full">
+  <section class="links w-full relative">
     <div class="grid grid-cols-2 container md:px-6 mx-auto">
       <div class="text-center">
         <h2>We are hiring!</h2>
@@ -101,13 +101,13 @@
         <a href="#" class="button open-modal" onclick="openModal(event)">Contact Us</a>
       </div>
     </div>
-  </section>
-  <footer class="relative">
     <div class="proteins absolute left-0 top-0 two">
       <img src="images/protein-blue.png" width="400" class="blue" alt="Blue Protein Molecule">
       <img src="images/protein-purple.png" width="600" class="purple" alt="Purple Protein Molecule">
       <img src="images/protein-pink.png" width="200" class="pink" alt="Pink Protein Molecule">
     </div>
+  </section>
+  <footer class="relative">
   </footer>
   <div class="w-full copyright container md:px-6 mx-auto">
     <p>&copy; 2021 Gandeeva Therapeutics. All rights reserved</p>
@@ -135,8 +135,8 @@
   </div>
   <div class="leadership-profile">
     <div class="close-profile" onclick="closeProfile(event)"></div>
-    <div class="flex flex-col wrap">
-      <div class="flex flex-row profile-content">
+    <div class="flex flex-col lg:flex-row wrap">
+      <div class="flex flex-col lg:flex-row profile-content">
         <div class="avatar mb-12 lg:mb-0 flex-shrink-0" style="background-image: url('images/sriram.jpeg');"></div>
         <div>
           <span class="name">Sriram Subramaniam</span>
@@ -148,7 +148,9 @@
           <a href="http://electron.med.ubc.ca" class="button solid" target="_blank" rel="noreferrer">Academic Research</a>
         </div>
       </div>
-      <div class="flex flex-row profile-content">
+    </div>
+    <div class="flex flex-col lg:flex-row wrap">
+      <div class="flex flex-col lg:flex-row profile-content">
         <div class="avatar mb-12 lg:mb-0 flex-shrink-0" style="background-image: url('images/don.jpg');"></div>
         <div>
           <span class="name">Don Kania</span>
@@ -159,7 +161,9 @@
           <a href="https://www.linkedin.com/in/don-kania-039a6612/" class="button solid" target="_blank" rel="noreferrer">LinkedIn</a>
         </div>
       </div>
-      <div class="flex flex-row profile-content">
+    </div>
+    <div class="flex flex-col lg:flex-row wrap">
+      <div class="flex flex-col lg:flex-row profile-content">
         <div class="avatar mb-12 lg:mb-0 flex-shrink-0" style="background-image: url('images/jason.jpeg');"></div>
         <div>
           <span class="name">Jason Crawford</span>

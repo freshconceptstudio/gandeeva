@@ -333,7 +333,7 @@ h2:after {
   height: 462px;
   position: absolute;
   left: 0;
-  top: -530px;
+  top: 0;
 }
 
 .proteins.two {
@@ -522,10 +522,10 @@ button[type="submit"] {
 
 .leadership-profile .wrap {
   padding: 80px;
-  height: 840px;
   position: relative;
-  top: 50%;
-  margin-top: -420px;
+  overflow: scroll;
+  height: 100%;
+  align-items: center;
 }
 
 .leadership-profile .avatar {
@@ -533,7 +533,6 @@ button[type="submit"] {
   background-position: center top;
   height: 680px;
   width: 40%;
-  min-width: 500px;
   max-width: 100%;
   margin-right: 30px;
 }
@@ -545,13 +544,14 @@ button[type="submit"] {
 
 .leadership-profile .close-profile {
   position: absolute;
-  width: 100px;
-  height: 100px;
-  left: -100px;
+  width: 5%;
+  height: 5%;
+  left: -5%;
+  margin-left: 1px;
   top: 50%;
   margin-top: -50px;
   background-color: white;
-  background-image: url('../images/close-panel.svg');
+  background-image: url(../images/close-panel.svg);
   background-repeat: no-repeat;
   background-position: center;
   cursor: pointer;
@@ -572,27 +572,39 @@ button[type="submit"] {
   color: #5f2f84;
 }
 
-.profile-content {
-  opacity: 0;
-  transition:All 1s ease;
-  height: 0;
-  position: relative;
+.leadership-profile .wrap {
+  display: none;
 }
 
-.profile-content.active {
-  opacity: 1;
-  height: auto;
-  z-index: 999;
+.leadership-profile .wrap.active {
+  display: block;
 }
 
 .leadership-profile .close-profile:hover:after {
   opacity: 1;
   }
 
+.copyright p {
+  text-align: center;
+}
+
 
 @media only screen and (max-width: 768px) {
   .container {
     max-width: 90%;
+  }
+
+  .leadership-profile .avatar {
+    height: 400px;
+    width: 100%;
+  }
+
+  .leadership-profile .wrap {
+    padding: 40px;
+  }
+
+  .profile-content {
+    padding-bottom: 40px;
   }
 
   h1 {
