@@ -1,14 +1,8 @@
-window.addEventListener('load', () => {
-  var element = document. getElementsByClassName('background')[0];
-  element. classList. add('initial');
-
-  close = document.getElementsByClassName('close')[0];
-  close.onclick = function(){closeModal()};
-
-
-  object.onclick = function(){myScript};
-})
-
+function openModal(e) {
+  e.preventDefault();
+  var modal = document.getElementsByClassName('overlay')[0];
+  modal.classList.add("active");
+}
 
 function closeModal() {
   var element = document. getElementsByClassName('overlay')[0];
@@ -21,5 +15,17 @@ function openProfile(e, index) {
   element.classList.add('show');
 
   var profile_content = document.getElementsByClassName('profile-content')[index];
-  profile_content.classList.add('show');
+  profile_content.classList.add('active');
+}
+
+function closeProfile(e) {
+  e.preventDefault();
+  var element = document.getElementsByClassName('leadership-profile')[0];
+  element.classList.remove('show');
+
+  var profiles = document.querySelectorAll('.profile-content'), i;
+
+  for (i = 0; i < profiles.length; ++i) {
+    profiles[i].classList.remove('active');
+  }
 }

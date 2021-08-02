@@ -98,7 +98,7 @@ h2:after {
   margin-left: -50px;
 }
 
-h3 {
+.leadership h2 {
  font-style: normal;
  font-weight: normal;
  font-size: 26px;
@@ -120,6 +120,8 @@ h3 {
 }
 
 .background {
+  background: url('images/cover-image.png');
+  background-size: contain;
   opacity: 1;
   background-repeat: no-repeat !important;
   background-position: center !important;
@@ -218,7 +220,6 @@ h3 {
 
 
 /*LEADERSHIP TEAM*/
-
 .leadership {
   position: relative;
 }
@@ -239,18 +240,14 @@ h3 {
 }
 
 .leadership .avatar {
-  width: 100%;
-  height: 600px;
+  width: 200px;
+  height: 250px;
   background-position: center top;
   background-size: cover;
   margin-right: 40px;
   position: relative;
   background-repeat: no-repeat;
   transition: all .5s;
-}
-
-.leadership .avatar:hover {
-  transform: scale(1.1);
 }
 
 .leadership .avatar .overflow {
@@ -271,28 +268,6 @@ h3 {
 .leadership .avatar:hover .overflow {
   opacity: 1;
 }
-
-/*.avatar:before {
-  content: "";
-  position: absolute;
-  left: -25px;
-  top: -25px;
-  width: 400px;
-  height: 400px;
-  background-color: #FE3A83;
-  z-index: -1;
-  opacity: .5;
-}
-
-.avatar.purple:before {
-  background-color: #5F2F84;
-}
-
-.avatar.blue:before {
-  background-color: #3AB5E6;
-}*/
-
-
 
 .leadership td.link {
   background-position: center;
@@ -333,7 +308,7 @@ h3 {
   line-height: 31px;
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  color: #666666;
+  color: #999;
   display: block;
 }
 
@@ -345,9 +320,7 @@ h3 {
   line-height: 42px;
 }
 
-
 /*FLOATING PROTEINS*/
-
 .proteins {
   z-index:-1;
   width: 421px;
